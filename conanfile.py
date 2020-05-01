@@ -55,7 +55,7 @@ conan_basic_setup()''')
         # self.run("cmake --build . %s" % cmake.build_config)
 
     def package(self):
-        self.copy("*.h", dst="include", src="sqlpp11-connector-postgresql/include")
+        self.copy("*", dst="include", src="sqlpp11-connector-postgresql/include")
         self.copy("*.py", dst="scripts", src="sqlpp11-connector-postgresql/scripts", keep_path=False)
         self.copy("*.lib", dst="lib", keep_path=False)
         self.copy("*.dll", dst="bin", keep_path=False)
